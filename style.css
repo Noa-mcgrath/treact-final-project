@@ -1548,6 +1548,10 @@ MOBILE RESPONSIVENESS ↓
   .section__title {
     line-height: 1.25;
   }
+
+  .quality__grid {
+    transform: translateY(50%);
+  }
   
   h1 {
     font-size: 36px;
