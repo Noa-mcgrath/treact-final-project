@@ -1452,7 +1452,7 @@ MOBILE RESPONSIVENESS ↓
   }
 
   #pricing .plan {
-    flex: 0 1 384px;
+    flex: 0 1 auto;
     margin-top: 24px;
   }
 
@@ -1550,7 +1550,7 @@ MOBILE RESPONSIVENESS ↓
   }
 
   .quality__grid {
-    transform: translateY(50%);
+    transform: none;
   }
   
   h1 {
