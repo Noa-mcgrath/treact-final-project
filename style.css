@@ -339,15 +339,16 @@ section {
 
 header .row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
+  gap: 32px;
+  text-align: left;
 }
 
 .header__description {
-  width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 640px;
 }
 
 .header__description--para {
@@ -357,7 +358,7 @@ header .row {
 .header__email {
   width: 100%;
   max-width: 448px;
-  margin: 0 auto;
+  margin: 0;
   height: 68px;
   position: relative;
   display: flex;
@@ -454,9 +455,12 @@ header .container {
 }
 
 .header__img--wrapper {
-  width: min(100%, 1024px);
+  flex: 1 1 0;
+  min-width: 0;
+  width: 50%;
+  max-width: 560px;
   aspect-ratio: 1.12;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .header__img {
@@ -1423,6 +1427,25 @@ MOBILE RESPONSIVENESS ↓
 }
 
 @media (max-width: 1024px) {
+  header .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header__description {
+    width: 100%;
+    max-width: 640px;
+  }
+
+  .header__email {
+    margin: 0 auto;
+  }
+
+  .header__img--wrapper {
+    width: 100%;
+    max-width: 640px;
+  }
+
   .feature {
     width: 50%;
   }
@@ -1460,6 +1483,10 @@ MOBILE RESPONSIVENESS ↓
     width: 100%;
     max-width: 768px;
     margin: 0 auto;
+  }
+
+  .quality__grid {
+    transform: none;
   }
 
   .steps__img--wrapper,
@@ -1551,10 +1578,6 @@ MOBILE RESPONSIVENESS ↓
     line-height: 1.25;
   }
 
-  .quality__grid {
-    transform: none;
-  }
-  
   h1 {
     font-size: 36px;
   }
